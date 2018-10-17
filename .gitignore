@@ -1,0 +1,6 @@
+*.elc
+session.*
+ac-comphist.dat
+auto-save-list/
+tutorial/
+eshell/
