@@ -3,58 +3,58 @@
 			 ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
 (package-initialize)
 
-;; Load and enable theme
+;; 共享系统剪贴板
+(setq x-select-enable-clipboard t)
+
+;; 加载并启用ample主题
 (load-theme 'ample t t)
 (enable-theme 'ample)
 
-;; Set emacs backupfile dir
+;; 设置emacs自动备份目录
 (setq backup-directory-alist (quote (("." . "~/.emacs-backups"))))
 
-;; Show linenum
-;; (setq linum-format "%3d ")
-;; (global-linum-mode t)
-
-;; Set frame size
+;; 设置初始启动大小
 (setq default-frame-alist
-      '((height . 35)(width . 100)))
+      '((height . 25)(width . 80)))
 
-;; Font config
+;; 设置字体
 (add-to-list 'default-frame-alist
-      '(font . "Source Code Pro-16"))
+      '(font . "Source Code Pro-18"))
 
-;; Hide various bar
+;; 隐藏工具栏 菜单栏 滚动条
 (tool-bar-mode 0)
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
 
-;; Hide startup message
+;; 禁止开始界面
 (setq inhibit-startup-message t)
 
-;; Mute bellring
+;; 禁止系统声音
 (setq ring-bell-function 'ignore)
 
-;; Display time
+;; 显示时间
 (display-time-mode 1)
 
-;; Highlight current line
+;; 高亮当前行
 (global-hl-line-mode 1)
 
-
-
-
-;; Bracket auto complete
+;; 括号自动补全
 (electric-pair-mode t)
 
-;; Auto-complete
+;; 根据字典自动补全
 (require 'auto-complete)
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/dict")
 (ac-config-default)
 
 
-;; Set C-mode offset
+;; 设置C-mode4个缩进
 (setq c-basic-offset 4)
 
-;; Auto enable web-mode by *.jsp
+;; 打开*.jsp文件时自动启用web-mode
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
+
+;; 彩虹模式
+(add-to-list 'load-path "/home/libohan/.emacs.d/packages/rainbow-mode-1.0")
+(require 'rainbow-mode)
