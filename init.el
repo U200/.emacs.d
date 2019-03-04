@@ -6,9 +6,9 @@
 ;; 共享系统剪贴板
 (setq x-select-enable-clipboard t)
 
-;; 加载并启用ample主题
-(load-theme 'ample t t)
-(enable-theme 'ample)
+;; 加载并启用zenburn主题
+(load-theme 'zenburn t t)
+(enable-theme 'zenburn)
 
 ;; 设置emacs自动备份目录
 (setq backup-directory-alist (quote (("." . "~/.emacs-backups"))))
@@ -58,3 +58,15 @@
 ;; 彩虹模式
 (add-to-list 'load-path "/home/libohan/.emacs.d/packages/rainbow-mode-1.0")
 (require 'rainbow-mode)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (zenburn-theme web-mode rjsx-mode auto-complete))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
