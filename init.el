@@ -18,8 +18,11 @@
       '((height . 25)(width . 80)))
 
 ;; 设置字体
-(add-to-list 'default-frame-alist
-      '(font . "Source Code Pro-18"))
+;; (add-to-list 'default-frame-alist
+;;      '(font . "Source Code Pro-18"))
+ (add-to-list 'default-frame-alist
+      '(font . "Consolas-21"))
+
 
 ;; 隐藏工具栏 菜单栏 滚动条
 (tool-bar-mode 0)
@@ -56,7 +59,7 @@
 (add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
 
 ;; 彩虹模式
-(add-to-list 'load-path "/home/libohan/.emacs.d/packages/rainbow-mode-1.0")
+(add-to-list 'load-path "~/.emacs.d/packages/rainbow-mode-1.0")
 (require 'rainbow-mode)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
